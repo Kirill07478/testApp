@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B143DFCD270C9A09000B1415 /* Data+PrettyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143DFCC270C9A09000B1415 /* Data+PrettyJson.swift */; };
+		B143DFD0270CBA3C000B1415 /* DetailingWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143DFCF270CBA3C000B1415 /* DetailingWeatherModel.swift */; };
+		B143DFD2270CC9B1000B1415 /* DetailingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B143DFD1270CC9B1000B1415 /* DetailingPresenter.swift */; };
 		B163369E270BE7550082EBF1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163369D270BE7550082EBF1 /* ListViewController.swift */; };
 		B16336A0270BE76B0082EBF1 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B163369F270BE76B0082EBF1 /* ListViewController.storyboard */; };
 		B16336A2270BE92A0082EBF1 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16336A1270BE92A0082EBF1 /* ListInteractor.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B143DFCC270C9A09000B1415 /* Data+PrettyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+PrettyJson.swift"; sourceTree = "<group>"; };
+		B143DFCF270CBA3C000B1415 /* DetailingWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailingWeatherModel.swift; sourceTree = "<group>"; };
+		B143DFD1270CC9B1000B1415 /* DetailingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailingPresenter.swift; sourceTree = "<group>"; };
 		B163369D270BE7550082EBF1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B163369F270BE76B0082EBF1 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		B16336A1270BE92A0082EBF1 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
@@ -65,6 +71,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B143DFCB270C99ED000B1415 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B143DFCC270C9A09000B1415 /* Data+PrettyJson.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B143DFCE270CBA26000B1415 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B143DFCF270CBA3C000B1415 /* DetailingWeatherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B163369B270BE7280082EBF1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +139,13 @@
 		B16336B3270BEB3C0082EBF1 /* Detailing */ = {
 			isa = PBXGroup;
 			children = (
+				B143DFCE270CBA26000B1415 /* Models */,
 				B16336BC270C80DD0082EBF1 /* Services */,
 				B16336B4270BEB6B0082EBF1 /* DetailingInteractor.swift */,
 				B16336B6270BEB9B0082EBF1 /* DetailingRouter.swift */,
 				B16336B8270BEBCA0082EBF1 /* DetailingViewController.swift */,
 				B16336BA270BEBE20082EBF1 /* DetailingViewController.storyboard */,
+				B143DFD1270CC9B1000B1415 /* DetailingPresenter.swift */,
 			);
 			path = Detailing;
 			sourceTree = "<group>";
@@ -129,6 +153,7 @@
 		B16336BC270C80DD0082EBF1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B143DFCB270C99ED000B1415 /* Extension */,
 				B16336BD270C810A0082EBF1 /* URLWeatherService.swift */,
 			);
 			path = Services;
@@ -240,13 +265,16 @@
 			files = (
 				B16336A2270BE92A0082EBF1 /* ListInteractor.swift in Sources */,
 				B16336A6270BE9780082EBF1 /* ListRouter.swift in Sources */,
+				B143DFCD270C9A09000B1415 /* Data+PrettyJson.swift in Sources */,
 				B16336B5270BEB6B0082EBF1 /* DetailingInteractor.swift in Sources */,
 				B16336B2270BEABF0082EBF1 /* ElementCellModel.swift in Sources */,
 				B1ADF10E270BDD9900FB7CFF /* ViewController.swift in Sources */,
 				B16336AF270BEA1F0082EBF1 /* ElementCell.swift in Sources */,
 				B16336BE270C810A0082EBF1 /* URLWeatherService.swift in Sources */,
+				B143DFD0270CBA3C000B1415 /* DetailingWeatherModel.swift in Sources */,
 				B1ADF10A270BDD9900FB7CFF /* AppDelegate.swift in Sources */,
 				B163369E270BE7550082EBF1 /* ListViewController.swift in Sources */,
+				B143DFD2270CC9B1000B1415 /* DetailingPresenter.swift in Sources */,
 				B16336A4270BE94E0082EBF1 /* ListPresenter.swift in Sources */,
 				B16336A9270BE9B50082EBF1 /* ListBackendModel.swift in Sources */,
 				B16336B7270BEB9B0082EBF1 /* DetailingRouter.swift in Sources */,

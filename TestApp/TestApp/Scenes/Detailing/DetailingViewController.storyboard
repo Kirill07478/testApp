@@ -15,9 +15,33 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPa-f3-W2s">
+                                <rect key="frame" x="207" y="60" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beX-ca-dEL">
+                                <rect key="frame" x="203.5" y="430" width="7" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pPa-f3-W2s" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Egz-Ze-ue3"/>
+                            <constraint firstItem="beX-ca-dEL" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="dOc-YE-eCz"/>
+                            <constraint firstItem="beX-ca-dEL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eBu-il-bEL"/>
+                            <constraint firstItem="pPa-f3-W2s" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fel-5d-Vyh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameCity" destination="pPa-f3-W2s" id="VIO-hE-XCf"/>
+                        <outlet property="temperture" destination="beX-ca-dEL" id="MQa-Vi-ZjN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

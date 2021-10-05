@@ -7,8 +7,18 @@
 
 import UIKit
 
+protocol DetailingDisplayLogic: class {
+    
+    func display(data: DetailingWeatherModel)
+    
+}
+
 class DetailingViewController: UIViewController {
 
+    //MARK: - IBOutlets
+    @IBOutlet weak var nameCity: UILabel!
+    @IBOutlet weak var temperture: UILabel!
+    
     //MARK: - External vars
     private(set) var router: (DetailingRoutingLogic & DetailingDataPassingProtocol)?
     
@@ -28,11 +38,15 @@ class DetailingViewController: UIViewController {
     private func setup() {
         
         let viewController = self
+        let presenter = DetailingPresenter()
         let interactor = DetailingInteractor()
         let router = DetailingRouter()
+        interactor.presenter = presenter
+        presenter.viewController = viewController
         viewController.interactor = interactor
         viewController.router = router
         router.dataStore = interactor
+
     }
     
     override func viewDidLoad() {
@@ -41,4 +55,19 @@ class DetailingViewController: UIViewController {
         interactor?.fetchDetails()
     }
 
+}
+
+//MARK: - Display logic implemnetation
+extension DetailingViewController: DetailingDisplayLogic {
+    
+    func display(data: DetailingWeatherModel) {
+        
+        nameCity.text = data.city
+        temperture.text = "\(data.temp) градусов Цельсия"
+        
+    }
+    
+    
+    
+    
 }
